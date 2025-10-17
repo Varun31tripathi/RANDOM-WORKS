@@ -1,0 +1,56 @@
+.main{
+    background-image: url(infinite/bg_dragon.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.effect-container{
+    width: 100%;
+    height: 320px;
+    background-color:rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 20px 0;
+
+}
+.card{
+    flex: 0 0 auto;
+    width: 200px;
+    height: 300px;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+.effect-track{
+    display: flex;
+    width: max-content;
+    animation: scroll 10s linear infinite;
+
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+.effect-container:hover .effect-track{
+    animation-play-state: paused;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
